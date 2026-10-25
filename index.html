@@ -3,10 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sourav Ahmed — AI Engineer, Systems Automator &amp; CSE Scholar</title>
-    <meta name="description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; aspiring AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
-    <meta property="og:title" content="Sourav Ahmed — AI Engineer, Systems Automator &amp; CSE Scholar" />
-    <meta property="og:description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; aspiring AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
+    <title>Sourav Ahmed | AI Engineer &amp; Systems Automator</title>
+    <meta name="description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
+    <meta name="author" content="Sourav Ahmed" />
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sourav Ahmed Portfolio" />
+    <meta property="og:title" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
+    <meta property="og:description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image:secure_url" content="/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
+    <meta name="twitter:description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "#person",
+            "name": "Sourav Ahmed",
+            "jobTitle": "AI Engineer & Systems Automator",
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Bangladesh University of Professionals (BUP)"
+            },
+            "knowsAbout": [
+              "Artificial Intelligence",
+              "n8n Workflow Automation",
+              "Retrieval-Augmented Generation (RAG)",
+              "Django",
+              "Full-Stack Web Development",
+              "Python"
+            ],
+            "image": "/og-image.jpg"
+          },
+          {
+            "@type": "WebSite",
+            "name": "Sourav Ahmed Portfolio",
+            "description": "Portfolio of Sourav Ahmed — BUP CSE scholar & AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends."
+          }
+        ]
+      }
+    </script>
+
+    <!-- Canonical URL resolution -->
+    <script>
+      (function() {
+        try {
+          if (typeof window !== 'undefined' && window.location) {
+            var origin = window.location.origin;
+            var path = window.location.pathname;
+            var fullUrl = origin + path;
+
+            // Set or update canonical link
+            var canonicalLink = document.querySelector('link[rel="canonical"]');
+            if (!canonicalLink) {
+              canonicalLink = document.createElement('link');
+              canonicalLink.setAttribute('rel', 'canonical');
+              document.head.appendChild(canonicalLink);
+            }
+            canonicalLink.setAttribute('href', fullUrl);
+
+            // Set og:url meta
+            var ogUrl = document.querySelector('meta[property="og:url"]');
+            if (!ogUrl) {
+              ogUrl = document.createElement('meta');
+              ogUrl.setAttribute('property', 'og:url');
+              document.head.appendChild(ogUrl);
+            }
+            ogUrl.setAttribute('content', fullUrl);
+
+            // Update og:image with absolute URL for social crawlers requiring absolute scheme
+            var ogImage = document.querySelector('meta[property="og:image"]');
+            if (ogImage && ogImage.getAttribute('content').startsWith('/')) {
+              var absoluteImg = origin + ogImage.getAttribute('content');
+              ogImage.setAttribute('content', absoluteImg);
+              var ogImageSecure = document.querySelector('meta[property="og:image:secure_url"]');
+              if (ogImageSecure) ogImageSecure.setAttribute('content', absoluteImg);
+              var twitterImage = document.querySelector('meta[name="twitter:image"]');
+              if (twitterImage) twitterImage.setAttribute('content', absoluteImg);
+            }
+          }
+        } catch(e) {}
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
