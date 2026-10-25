@@ -1,0 +1,8 @@
+{
+  "name": "Sourav Ahmed Portfolio",
+  "description": "Portfolio of Sourav Ahmed — Mentor, Developer, and aspiring AI Engineer specializing in Django backends and n8n automation workflows.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
