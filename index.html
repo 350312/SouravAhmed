@@ -7,23 +7,40 @@
     <meta name="description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
     <meta name="author" content="Sourav Ahmed" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://portfolio-psi-dun-18.vercel.app/" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/jpeg" href="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
+    <link rel="shortcut icon" href="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
+    <link rel="apple-touch-icon" href="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
+    <link rel="image_src" href="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
+
     <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Discord -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Sourav Ahmed Portfolio" />
+    <meta property="og:url" content="https://portfolio-psi-dun-18.vercel.app/" />
     <meta property="og:title" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
     <meta property="og:description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta property="og:image:secure_url" content="/og-image.jpg" />
+    <meta property="og:image" content="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Itemprop / Search Engine & WhatsApp fallback -->
+    <meta itemprop="name" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
+    <meta itemprop="description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
+    <meta itemprop="image" content="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
 
     <!-- Twitter / X Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://portfolio-psi-dun-18.vercel.app/" />
     <meta name="twitter:title" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
     <meta name="twitter:description" content="Portfolio of Sourav Ahmed — BUP CSE scholar &amp; AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends." />
-    <meta name="twitter:image" content="/og-image.jpg" />
+    <meta name="twitter:image" content="https://portfolio-psi-dun-18.vercel.app/og-image.jpg" />
     <meta name="twitter:image:alt" content="Sourav Ahmed | AI Engineer &amp; Systems Automator" />
 
     <!-- Schema.org JSON-LD Structured Data -->
@@ -33,9 +50,10 @@
         "@graph": [
           {
             "@type": "Person",
-            "@id": "#person",
+            "@id": "https://portfolio-psi-dun-18.vercel.app/#person",
             "name": "Sourav Ahmed",
             "jobTitle": "AI Engineer & Systems Automator",
+            "url": "https://portfolio-psi-dun-18.vercel.app/",
             "alumniOf": {
               "@type": "CollegeOrUniversity",
               "name": "Bangladesh University of Professionals (BUP)"
@@ -48,53 +66,38 @@
               "Full-Stack Web Development",
               "Python"
             ],
-            "image": "/og-image.jpg"
+            "image": "https://portfolio-psi-dun-18.vercel.app/og-image.jpg"
           },
           {
             "@type": "WebSite",
             "name": "Sourav Ahmed Portfolio",
+            "url": "https://portfolio-psi-dun-18.vercel.app/",
             "description": "Portfolio of Sourav Ahmed — BUP CSE scholar & AI Engineer specializing in autonomous n8n workflows, RAG retrieval pipelines, and scalable Django backends."
           }
         ]
       }
     </script>
 
-    <!-- Canonical URL resolution -->
+    <!-- Custom Domain Fallback Script (if user points a custom domain) -->
     <script>
       (function() {
         try {
           if (typeof window !== 'undefined' && window.location) {
             var origin = window.location.origin;
             var path = window.location.pathname;
-            var fullUrl = origin + path;
-
-            // Set or update canonical link
-            var canonicalLink = document.querySelector('link[rel="canonical"]');
-            if (!canonicalLink) {
-              canonicalLink = document.createElement('link');
-              canonicalLink.setAttribute('rel', 'canonical');
-              document.head.appendChild(canonicalLink);
-            }
-            canonicalLink.setAttribute('href', fullUrl);
-
-            // Set og:url meta
-            var ogUrl = document.querySelector('meta[property="og:url"]');
-            if (!ogUrl) {
-              ogUrl = document.createElement('meta');
-              ogUrl.setAttribute('property', 'og:url');
-              document.head.appendChild(ogUrl);
-            }
-            ogUrl.setAttribute('content', fullUrl);
-
-            // Update og:image with absolute URL for social crawlers requiring absolute scheme
-            var ogImage = document.querySelector('meta[property="og:image"]');
-            if (ogImage && ogImage.getAttribute('content').startsWith('/')) {
-              var absoluteImg = origin + ogImage.getAttribute('content');
-              ogImage.setAttribute('content', absoluteImg);
-              var ogImageSecure = document.querySelector('meta[property="og:image:secure_url"]');
-              if (ogImageSecure) ogImageSecure.setAttribute('content', absoluteImg);
-              var twitterImage = document.querySelector('meta[name="twitter:image"]');
-              if (twitterImage) twitterImage.setAttribute('content', absoluteImg);
+            // Only dynamically replace if the host is different from the primary Vercel deployment
+            if (origin && !origin.includes('portfolio-psi-dun-18.vercel.app') && !origin.includes('localhost') && !origin.includes('127.0.0.1')) {
+              var fullUrl = origin + path;
+              var canonical = document.querySelector('link[rel="canonical"]');
+              if (canonical) canonical.setAttribute('href', fullUrl);
+              var ogUrl = document.querySelector('meta[property="og:url"]');
+              if (ogUrl) ogUrl.setAttribute('content', fullUrl);
+              var ogImg = document.querySelector('meta[property="og:image"]');
+              if (ogImg) ogImg.setAttribute('content', origin + '/og-image.jpg');
+              var ogImgSec = document.querySelector('meta[property="og:image:secure_url"]');
+              if (ogImgSec) ogImgSec.setAttribute('content', origin + '/og-image.jpg');
+              var twImg = document.querySelector('meta[name="twitter:image"]');
+              if (twImg) twImg.setAttribute('content', origin + '/og-image.jpg');
             }
           }
         } catch(e) {}
