@@ -23,6 +23,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   const [link, setLink] = useState('');
   const [github, setGithub] = useState('');
   const [icon, setIcon] = useState('');
+  const [image, setImage] = useState('');
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -36,6 +37,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
       setLink(editingProject.link || '');
       setGithub(editingProject.github || '');
       setIcon(editingProject.icon || '');
+      setImage(editingProject.image || '');
     } else {
       setTitle('');
       setTag('');
@@ -46,6 +48,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
       setLink('');
       setGithub('');
       setIcon('');
+      setImage('');
     }
     setError('');
   }, [editingProject, isOpen]);
@@ -75,6 +78,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
       link: link.trim(),
       github: github.trim(),
       icon: icon.trim() || '💠',
+      image: image.trim() || undefined,
     });
   };
 
@@ -186,6 +190,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               />
             </div>
           </div>
+
+          <label htmlFor="f-image">Screenshot Image Path</label>
+          <input
+            id="f-image"
+            type="text"
+            placeholder="/images/projects/rpg-game.png"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          />
 
           <label htmlFor="f-icon">Icon (emoji)</label>
           <input

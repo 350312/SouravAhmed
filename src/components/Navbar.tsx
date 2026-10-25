@@ -54,13 +54,36 @@ export const Navbar: React.FC<NavbarProps> = ({ onResumeClick }) => {
           <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact'); }}>
             Contact
           </a>
+
+          {/* Dedicated Mobile Menu Action Items */}
+          <div className="mobile-drawer-actions">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onResumeClick();
+              }}
+              className="btn btn-secondary"
+              style={{ width: '100%', justifyContent: 'center' }}
+            >
+              <FileText size={15} />
+              <span>Interactive Resume</span>
+            </button>
+            <button
+              onClick={() => scrollTo('contact')}
+              className="btn btn-primary"
+              style={{ width: '100%', justifyContent: 'center' }}
+            >
+              <span>Let's Talk</span>
+              <ArrowUpRight size={15} />
+            </button>
+          </div>
         </div>
 
         {/* Zone 3: Actions */}
         <div className="nav-actions">
           <button
             onClick={onResumeClick}
-            className="btn btn-ghost btn-sm"
+            className="btn btn-ghost btn-sm nav-btn-resume"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
           >
             <FileText size={14} />
@@ -68,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onResumeClick }) => {
           </button>
           <button
             onClick={() => scrollTo('contact')}
-            className="btn btn-primary btn-sm"
+            className="btn btn-primary btn-sm nav-btn-talk"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}
           >
             <span>Let's Talk</span>

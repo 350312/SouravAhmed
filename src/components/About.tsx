@@ -14,7 +14,7 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '48px', alignItems: 'start' }}>
+        <div className="about-grid">
           {/* Narrative bio */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', color: 'var(--text-1)', fontSize: '15px', lineHeight: 1.75 }}>
             <p>
@@ -27,7 +27,7 @@ export const About: React.FC = () => {
               Beyond raw algorithms, I believe high-leverage software requires <b style={{ color: 'var(--text-0)' }}>transparent systems architecture</b>. I design clear workflow schemas in Canva and model structured financial/data tables in Excel, ensuring that every automation pipeline I deliver is completely understandable, maintainable, and audit-ready for stakeholders.
             </p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '12px' }}>
+            <div className="about-sub-grid">
               <div style={{ background: 'var(--card)', border: '1px solid var(--line)', padding: '16px', borderRadius: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--cyan)', fontWeight: 600, fontSize: '14px', marginBottom: '6px' }}>
                   <Cpu size={16} />

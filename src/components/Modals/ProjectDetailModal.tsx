@@ -59,7 +59,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           <div
             style={{
               width: '100%',
-              height: '240px',
+              height: '280px',
               borderRadius: '12px',
               overflow: 'hidden',
               marginBottom: '24px',
@@ -70,10 +70,12 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             <img
               src={project.image}
               alt={project.title}
+              referrerPolicy="no-referrer"
               style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                objectPosition: 'top center',
                 display: 'block',
               }}
             />
@@ -207,7 +209,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 className="btn btn-primary"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
               >
-                <span>Launch Live System</span>
+                <span>Visit Live Project</span>
                 <ArrowUpRight size={15} />
               </a>
             )}

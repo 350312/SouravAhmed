@@ -4,26 +4,137 @@ export const PROFILE_AVATAR = "/assets/aistudio/image_4b97ffa9.png";
 
 export const DEFAULT_PROJECTS: Project[] = [
   {
-    id: 'p2',
+    id: 'monpura-tales-rpg',
+    icon: '🗡️',
+    tag: 'Classic 2D Action RPG',
+    category: 'Games & Tools',
+    title: 'Monpura Tales — Classic 2D Action RPG',
+    desc: 'A retro pixel-art 2D action role-playing adventure built for the web. Features real-time player combat, dungeon exploration, enemy state machines, and responsive canvas rendering.',
+    detailedOverview: 'Monpura Tales is an immersive browser-based 2D action role-playing game developed to deliver classic 16-bit nostalgic adventure without plugins or heavy engines. Engineered with pure HTML5 Canvas and TypeScript, it incorporates responsive 60 FPS sprite rendering, tilemap collision matrices, dynamic inventory management, health systems, and retro audio synthesis.',
+    highlights: [
+      'Custom 2D canvas sprite loop and smooth 60 FPS animation framework',
+      'Tile-based collision detection, weapon mechanics, and enemy AI state machines',
+      'Zero-dependency web runtime with responsive controls on both desktop and mobile'
+    ],
+    stack: ['TypeScript', 'HTML5 Canvas', 'Web Audio API', 'State Machine', 'Vercel'],
+    link: 'https://rpg-game-mu-seven.vercel.app/',
+    github: 'https://github.com/350312',
+    image: '/images/projects/rpg-game.png',
+    featured: true
+  },
+  {
+    id: 'bup-cse-notice-management',
+    icon: '🏛️',
+    tag: 'Academic Management',
+    category: 'Full-Stack & Web',
+    title: 'BUP CSE Notice & Course Board',
+    desc: 'A centralized academic management and notice board built for the Dept. of Computer Science & Engineering at Bangladesh University of Professionals (BUP).',
+    detailedOverview: 'A production-grade departmental notice and academic scheduling hub designed to eliminate fragmented messaging across social platforms. The system provides dedicated semester channels (1st through 8th semester plus Masters), automated test and exam schedules, downloadable syllabus materials, and secure authentication for department administrators.',
+    highlights: [
+      'Structured 8-semester course and class test announcement segregation',
+      'Secure administrative dashboard for faculty with CRUD notice orchestration',
+      'Searchable notice archive with urgent exam alert banners and deadline countdowns'
+    ],
+    stack: ['React', 'TypeScript', 'Node.js', 'Role-Based Auth', 'Tailwind CSS', 'Vercel'],
+    link: 'https://bup-cse-notice-management.vercel.app/',
+    github: 'https://github.com/350312',
+    image: '/images/projects/bup-cse-notice-management.png',
+    featured: true
+  },
+  {
+    id: 'frmc-lc-bmss',
+    icon: '🩺',
+    tag: 'Healthcare Community Hub',
+    category: 'Full-Stack & Web',
+    title: 'FRMC-LC BMSS — Medical Students\' Society Platform',
+    desc: 'Official digital portal for Fazlur Rahman Medical College Local Committee of Bangladesh Medical Students\' Society (BMSS), coordinating medical education, blood donor network, and standing committees.',
+    detailedOverview: 'FRMC-LC BMSS is a student-led medical community web platform operating across medical education (SCOME), sexual & reproductive health (SCORA), public health (SCOPH), human rights & peace (SCORP), and research exchange (SCORE). Features a searchable emergency blood donor registry, standing committee portals, executive member rosters, and community event publishing.',
+    highlights: [
+      'Emergency blood donor database with real-time blood group search and contact requests',
+      'Six dedicated standing committee modules with activity archives and event coverage',
+      'Responsive community portal supporting dark/light theme switching and member directory'
+    ],
+    stack: ['React / Next.js', 'TypeScript', 'Tailwind CSS', 'Search Indexing', 'Responsive Design'],
+    link: 'https://www.frmc-lc-bmss.com/',
+    github: 'https://github.com/350312',
+    image: '/images/projects/frmc-lc-bmss.png',
+    featured: true
+  },
+  {
+    id: 'docdoc-ai-health',
     icon: '🩺',
     tag: 'AI Health Consultant',
     category: 'AI & Automation',
-    title: 'Doc-Doc — AI Clinical & Health Consultant',
-    desc: 'An AI-driven diagnostic triage system that conducts conversational medical inquiry, contextualizes symptoms, and provides clinical guidance before physician consultation.',
+    title: 'Doc-Doc — AI Clinical & Health Companion',
+    desc: 'An AI-driven diagnostic triage and patient health companion tracking daily vitals, medication adherence, and clinical consultation prep with contextual symptom analysis.',
     detailedOverview: 'Doc-Doc is engineered to address the critical friction in pre-clinical triage. By integrating advanced conversational LLMs with medical terminology embeddings and clinical triage logic, the system conducts multi-turn interviews, analyzes vitals, and flags severity levels with confidence-scored insights.',
     highlights: [
       'Multi-turn conversational triage powered by Python and specialized health context models',
       'Django REST framework backend with isolated patient record encryption',
       'Structured clinical summary export for downstream doctors and telemedicine providers'
     ],
-    stack: ['Python', 'Django', 'AI Triage', 'Vector Embeddings', 'REST APIs'],
+    stack: ['Python', 'Django', 'AI Triage', 'Vector Embeddings', 'REST APIs', 'Vercel'],
     link: 'https://doc-doc-app.vercel.app/',
     github: 'https://github.com/350312?tab=stars',
-    image: '/src/assets/images/docdoc_ai_health_1792895629150.jpg',
+    image: '/images/projects/docdoc-ai-health.png',
     featured: true
   },
   {
-    id: 'p6',
+    id: 'whatsannounce-ai',
+    icon: '💬',
+    tag: 'AI Telemetry & Broadcast',
+    category: 'AI & Automation',
+    title: 'WhatsAnnounce AI — Auto-Broadcast WhatsApp Bot',
+    desc: 'An AI-driven broadcasting engine that formats unstructured announcements into structured WhatsApp messages, organizes audience segments, and delivers via anti-spam paced delivery queues.',
+    detailedOverview: 'Engineered to streamline mass communications without risking phone number bans. Users can dictate or type unstructured announcements; the AI assistant parses content, drafts formatted markdown for WhatsApp, and dispatches messages one-by-one with intelligent stagger intervals (10s to 60s) across segmented contact groups.',
+    highlights: [
+      'AI Copilot transforming raw speech and text into calibrated broadcast messages',
+      'Anti-spam pacing engine with adjustable interval delays (10s-60s) to prevent throttling',
+      'Segmented recipient targeting (Team, Clients, VIP, Vendors) with queue progress telemetry'
+    ],
+    stack: ['React', 'TypeScript', 'AI Copilot / LLM', 'WhatsApp API', 'Queue Engine'],
+    link: '',
+    image: '/images/projects/whatsannounce-ai.png',
+    featured: true
+  },
+  {
+    id: 'multi-agent-cognitive-engine',
+    icon: '🧠',
+    tag: 'Agent Orchestration',
+    category: 'AI & Automation',
+    title: 'Autonomous Multi-Agent Cognitive Architecture',
+    desc: 'A modular multi-agent cognitive architecture orchestrating deliberate thinking, tool invocation, computer vision desktop control, episodic memory, and agent-to-agent negotiation.',
+    detailedOverview: 'A deep agentic system framework exploring autonomous computer use and complex problem solving. Links a central thinking agent with specialized modules: tool use harnesses, persistent vector/episodic memory, desktop computer use, I/O prompt adaptation, and multi-agent coordination.',
+    highlights: [
+      'Six-pillar cognitive orchestration: Thinking, Tool Use, Other Agents, Memory, Computer Use, I/O Prompt',
+      'Autonomous task decomposition with hierarchical multi-agent delegation',
+      'Long-term memory persistence grounding agent decisions across extended sessions'
+    ],
+    stack: ['Python', 'Agentic Systems', 'Computer Use', 'Vector Embeddings', 'Function Calling'],
+    link: '',
+    image: '/images/projects/multi-agent-cognitive-engine.png',
+    featured: true
+  },
+  {
+    id: 'nobotech-solution-ltd',
+    icon: '🏢',
+    tag: 'Enterprise Cloud Hub',
+    category: 'Full-Stack & Web',
+    title: 'Nobotech Solution Ltd — IT Solutions & Cloud Platform',
+    desc: 'Corporate digital presence and service architecture platform for Nobotech Solution Ltd, showcasing resilient software engineering, cloud infrastructure, and AI systems.',
+    detailedOverview: 'Engineered and deployed the production web presence for Nobotech Solution Ltd. Designed with an ultra-clean corporate visual identity, responsive navigation, service discovery pathways, and high-performance cloud deployment.',
+    highlights: [
+      'Production-grade responsive web presence built for high availability',
+      'Service architecture showcases covering AI systems, software, and cloud infrastructure',
+      'Client consultation onboarding with interactive project scoping workflow'
+    ],
+    stack: ['React', 'Next.js / Node.js', 'Cloud Infrastructure', 'Tailwind CSS', 'Vercel'],
+    link: 'https://nobotech-site-qbwr.vercel.app/',
+    image: '/images/projects/nobotech-solution.png',
+    featured: true
+  },
+  {
+    id: 'gmail-auto-reply-n8n',
     icon: '📩',
     tag: 'Autonomous Pipeline',
     category: 'AI & Automation',
@@ -38,10 +149,10 @@ export const DEFAULT_PROJECTS: Project[] = [
     stack: ['n8n', 'OpenAI APIs', 'Webhook Routing', 'Gmail API', 'JSON Logic'],
     link: '',
     image: '/src/assets/images/n8n_automation_workflow_1792895628787.jpg',
-    featured: true
+    featured: false
   },
   {
-    id: 'p5',
+    id: 'rag-knowledge-assistant',
     icon: '📚',
     tag: 'Enterprise RAG',
     category: 'AI & Automation',
@@ -56,79 +167,10 @@ export const DEFAULT_PROJECTS: Project[] = [
     stack: ['Python', 'RAG Pipelines', 'Vector Search', 'LangChain', 'FastAPI'],
     link: '',
     image: '/src/assets/images/rag_knowledge_assistant_1792895629604.jpg',
-    featured: true
-  },
-  {
-    id: 'p3',
-    icon: '🏢',
-    tag: 'Enterprise Platform',
-    category: 'Full-Stack & Web',
-    title: 'Nobotech Solution LTD — Enterprise Platform',
-    desc: 'A scalable corporate web application and service hub engineered for high availability, responsive multi-tenant presentation, and client onboarding.',
-    detailedOverview: 'Architected and built the public-facing and service infrastructure for Nobotech Solutions. The platform features an optimized Node.js runtime, accessible modular design systems, dynamic service booking interfaces, and automated inquiry distribution.',
-    highlights: [
-      'High-performance Node.js server architecture with sub-100ms response times',
-      'Responsive design system engineered for executive desktops down to mobile views',
-      'Integrated contact ingestion and lead capture pipeline'
-    ],
-    stack: ['Node.js', 'Express', 'HTML5', 'Modern CSS', 'Cloud Deployment'],
-    link: 'https://nobotech-site-qbwr.vercel.app/',
-    image: '/src/assets/images/nobotech_startup_platform_1792895629812.jpg',
-    featured: true
-  },
-  {
-    id: 'p4',
-    icon: '🎙️',
-    tag: 'Conversational Voice',
-    category: 'AI & Automation',
-    title: 'Personal Voice Agent & Speech Pipeline',
-    desc: 'A real-time Python-driven voice assistant that captures spoken input, performs acoustic transcription, classifies user intent, and replies in low-latency synthesized speech.',
-    detailedOverview: 'Built to explore seamless natural human-computer interfaces. The system streams audio buffers, leverages state-of-the-art speech-to-text models, routes commands through an intent classifier, and synthesizes expressive audio responses with minimal turnaround latency.',
-    highlights: [
-      'Low-latency voice streaming and local acoustic buffer processing',
-      'Intent classification engine routing tasks to automation webhooks',
-      'Customizable voice personality and context persistence'
-    ],
-    stack: ['Python', 'Speech Recognition', 'TTS Engine', 'Audio Processing', 'Threading'],
-    link: '',
     featured: false
   },
   {
-    id: 'p7',
-    icon: '📝',
-    tag: 'Content Automation',
-    category: 'AI & Automation',
-    title: 'AI Script Generator & Creative Workflow',
-    desc: 'An automated pipeline that converts single-topic prompts into fully structured, scene-by-scene multimedia scripts ready for recording and production.',
-    detailedOverview: 'Engineered for creators and media production agencies. The workflow handles research aggregation, hook generation, script pacing, and visual cue annotations, delivering structured content outputs in minutes.',
-    highlights: [
-      'Multi-stage generative sequence: Topic -> Hook -> Narrative Beats -> Full Script',
-      'Customizable tone filters for educational, technical, and storytelling formats',
-      'Automated Google Drive and Notion export'
-    ],
-    stack: ['n8n', 'LLM Prompt Engineering', 'Notion API', 'Google Workspace'],
-    link: '',
-    featured: false
-  },
-  {
-    id: 'p8',
-    icon: '📞',
-    tag: 'Autonomous Telephony',
-    category: 'AI & Automation',
-    title: 'Automated Voice Agent for Customer Inquiries',
-    desc: 'A voice-driven n8n workflow that routes incoming customer calls, resolves frequent queries via dynamic knowledge lookups, and escalates edge cases.',
-    detailedOverview: 'An autonomous customer support agent capable of handling end-to-end inbound customer requests. Connects telephony webhooks with vector knowledge bases to answer FAQs accurately while logging call summaries to CRM databases.',
-    highlights: [
-      'Interactive voice response (IVR) integrated with intelligent conversational agents',
-      'Direct CRM synchronization and automated ticket generation for escalations',
-      'Tested with simulated support queries for high intent accuracy'
-    ],
-    stack: ['n8n', 'Voice AI', 'Webhook Infrastructure', 'CRM Integration'],
-    link: '',
-    featured: false
-  },
-  {
-    id: 'p1',
+    id: 'snake-water-gun-game',
     icon: '🐍',
     tag: 'Interactive Web',
     category: 'Games & Tools',
@@ -298,12 +340,17 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const ACCENT_COLORS = ['#8B5CF6', '#06B6D4', '#EC4899', '#F59E0B'];
 
 // Storage helpers
+const STORAGE_KEY = 'sourav_portfolio_projects_v4';
+
 export async function getStoredProjects(): Promise<Project[]> {
   try {
     if (typeof window !== 'undefined' && (window as any).storage?.get) {
       const res = await (window as any).storage.get('projects', true);
       if (res && res.value) {
-        return JSON.parse(res.value);
+        const parsed = JSON.parse(res.value);
+        if (Array.isArray(parsed) && parsed.some((p: Project) => p.id === 'monpura-tales-rpg')) {
+          return parsed;
+        }
       }
     }
   } catch (e) {
@@ -311,9 +358,12 @@ export async function getStoredProjects(): Promise<Project[]> {
   }
 
   try {
-    const local = localStorage.getItem('sourav_portfolio_projects_v2');
+    const local = localStorage.getItem(STORAGE_KEY);
     if (local) {
-      return JSON.parse(local);
+      const parsed = JSON.parse(local);
+      if (Array.isArray(parsed) && parsed.some((p: Project) => p.id === 'monpura-tales-rpg')) {
+        return parsed;
+      }
     }
   } catch (e) {
     console.warn('Error reading from localStorage:', e);
@@ -327,7 +377,7 @@ export async function setStoredProjects(projects: Project[]): Promise<boolean> {
   let saved = false;
 
   try {
-    localStorage.setItem('sourav_portfolio_projects_v2', json);
+    localStorage.setItem(STORAGE_KEY, json);
     saved = true;
   } catch (e) {
     console.warn('Error writing to localStorage:', e);

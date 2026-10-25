@@ -13,6 +13,7 @@ import { AdminLoginModal } from './components/Modals/AdminLoginModal';
 import { ConfirmDeleteModal } from './components/Modals/ConfirmDeleteModal';
 import { ProjectDetailModal } from './components/Modals/ProjectDetailModal';
 import { ResumeModal } from './components/Modals/ResumeModal';
+import { PandaGreeting } from './components/PandaGreeting';
 import { Project } from './types';
 import { DEFAULT_PROJECTS, getStoredProjects, setStoredProjects } from './data/portfolioData';
 
@@ -190,6 +191,14 @@ export const App: React.FC = () => {
         projectTitle={deletingProject?.title || ''}
         onConfirm={handleConfirmDelete}
         onCancel={() => setDeletingProject(null)}
+      />
+
+      {/* Animated Panda Mascot Greeting Experience */}
+      <PandaGreeting
+        onExploreProjects={() => {
+          document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        onResumeClick={() => setIsResumeModalOpen(true)}
       />
     </div>
   );
